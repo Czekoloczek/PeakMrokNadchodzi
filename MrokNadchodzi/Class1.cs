@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 using System.Collections;
 using HarmonyLib;
 
-[BepInPlugin("czekoloczek.peak.mroknadchodzi", "Mrok Nadchodzi", "1.0.0")]
+[BepInPlugin("czekoloczek.peak.mroknadchodzi", "Mrok Nadchodzi", "1.0.3")]
 public class PeakMod : BaseUnityPlugin
 {
     private AudioClip replacementClip;
@@ -40,7 +40,7 @@ public class PeakMod : BaseUnityPlugin
     private IEnumerator ReplaceAudio()
     {
         yield return new WaitForSeconds(1f);
-        var audioObj = GameObject.Find("GAME/GUIManager/Canvas_HUD/Notification/SFX");
+        var audioObj = GameObject.Find("GAME/GUIManager/Canvas_HUD/TheForRises/SFX");
         if (audioObj != null && replacementClip != null)
         {
             var audioSource = audioObj.GetComponent<AudioSource>();
@@ -69,7 +69,7 @@ public static class LocalizedText_RefreshText_Patch
         if (comp != null && comp.gameObject != null)
         {
             string path = comp.gameObject.transform.GetHierarchyPath();
-            if (path.EndsWith("GAME/GUIManager/Canvas_HUD/Notification/Fog"))
+            if (path.EndsWith("GAME/GUIManager/Canvas_HUD/TheFogRises/Fog"))
             {
                 var tmp = comp.GetComponent<TMPro.TextMeshProUGUI>();
                 if (tmp != null)
