@@ -40,7 +40,7 @@ public class PeakMod : BaseUnityPlugin
     private IEnumerator ReplaceAudio()
     {
         yield return new WaitForSeconds(1f);
-        var audioObj = GameObject.Find("GAME/GUIManager/Canvas_HUD/TheForRises/SFX");
+        var audioObj = GameObject.Find("GAME/GUIManager/Canvas_HUD/TheFogRises/SFX");
         if (audioObj != null && replacementClip != null)
         {
             var audioSource = audioObj.GetComponent<AudioSource>();
