@@ -20,7 +20,7 @@ public class PeakMod : BaseUnityPlugin
 
     private IEnumerator LoadAudio()
     {
-        string path = $"file://{Paths.PluginPath}/MrokNadchodzi/replacement.ogg";
+        string path = $"file://{Paths.PluginPath}/Czekoloczek-Mrok_Nadchodzi/replacement.ogg";
         using (WWW www = new WWW(path))
         {
             yield return www;
